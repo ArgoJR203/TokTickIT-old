@@ -34,7 +34,7 @@ cd client
 npm install
 
 # Install server dependencies
-cd ../server
+cd server
 npm install
 ```
 
