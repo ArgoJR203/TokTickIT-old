@@ -4,12 +4,12 @@ KMUTT CPE334 Full-Stack IT Service Desk Project
 
 ## Tech Stack
 
-| Layer    | Technology                          |
-| -------- | ----------------------------------- |
+| Layer    | Technology                                 |
+| -------- | ------------------------------------------ |
 | Frontend | React 18 · TypeScript · Vite · Bootstrap 5 |
-| Backend  | Node.js · Express 4 · TypeScript   |
-| Database | PostgreSQL · Prisma ORM             |
-| Testing  | Vitest · Supertest · Testing Library |
+| Backend  | Node.js · Express 4 · TypeScript           |
+| Database | PostgreSQL · Prisma ORM                    |
+| Testing  | Vitest · Supertest · Testing Library       |
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ KMUTT CPE334 Full-Stack IT Service Desk Project
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ArgoJR203/TokTickIT.git
 cd TokTickIT
 ```
 
@@ -130,19 +130,19 @@ TokTickIT/
 
 ### Client (`client/`)
 
-| Script          | Command           | Description                      |
-| --------------- | ----------------- | -------------------------------- |
-| `npm run dev`   | `vite`            | Start Vite dev server on :5173   |
+| Script          | Command             | Description                         |
+| --------------- | ------------------- | ----------------------------------- |
+| `npm run dev`   | `vite`              | Start Vite dev server on :5173      |
 | `npm run build` | `tsc && vite build` | Type-check and build for production |
-| `npm test`      | `vitest run`      | Run client tests                 |
+| `npm test`      | `vitest run`        | Run client tests                    |
 
 ### Server (`server/`)
 
-| Script                  | Command                  | Description                         |
-| ----------------------- | ------------------------ | ----------------------------------- |
-| `npm run dev`           | `tsx watch src/index.ts` | Start Express with hot-reload       |
-| `npm run build`         | `tsc`                    | Compile TypeScript                  |
-| `npm start`             | `node dist/index.js`     | Run compiled production build       |
-| `npm run prisma:migrate`| `prisma migrate dev`     | Run Prisma migrations               |
-| `npm run prisma:seed`   | `tsx prisma/seed.ts`     | Seed the database                   |
-| `npm test`              | `vitest run`             | Run server tests                    |
+| Script                   | Command                  | Description                   |
+| ------------------------ | ------------------------ | ----------------------------- |
+| `npm run dev`            | `tsx watch src/index.ts` | Start Express with hot-reload |
+| `npm run build`          | `tsc`                    | Compile TypeScript            |
+| `npm start`              | `node dist/index.js`     | Run compiled production build |
+| `npm run prisma:migrate` | `prisma migrate dev`     | Run Prisma migrations         |
+| `npm run prisma:seed`    | `tsx prisma/seed.ts`     | Seed the database             |
+| `npm test`               | `vitest run`             | Run server tests              |
