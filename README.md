@@ -34,13 +34,15 @@ cd client
 npm install
 
 # Install server dependencies
-cd server
+cd ../server
 npm install
 ```
 
 ### 3. Configure environment variables
 
 Copy the example env files and fill in your values:
+
+macOS / Linux:
 
 ```bash
 # Server — set your PostgreSQL connection string
@@ -50,7 +52,18 @@ cp server/.env.example server/.env
 cp client/.env.example client/.env
 ```
 
-Edit `server/.env` with your actual PostgreSQL credentials:
+Windows (PowerShell or cmd):
+
+```bash
+# Server — set your PostgreSQL connection string
+copy server\.env.example server\.env
+
+# Client — set the API URL (defaults to http://localhost:3000)
+copy client\.env.example client\.env
+```
+
+Never commit your real .env files — only .env.example is tracked in git.
+Edit `server/.env` with your actual PostgreSQL credentials (Select your own username password and database):
 
 ```env
 DATABASE_URL="postgresql://<user>:<password>@localhost:5432/<dbname>?schema=public"
