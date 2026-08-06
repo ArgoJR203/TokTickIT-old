@@ -19,3 +19,11 @@ datasource db {
 // Then run:  npx prisma migrate dev --name init
 // TODO(Issue 3): add the Category model below.
 // ---------------------------------------------------------------------------
+
+// Temporary in Issue 1. this only ensure that there'll not be error because of not having any model.
+// Read model will be add in Issue 3.
+model Category {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  createdAt DateTime @default(now())
+}
