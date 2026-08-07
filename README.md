@@ -36,6 +36,9 @@ npm install
 # Install server dependencies
 cd ../server
 npm install
+
+# Back to root directory
+cd ..
 ```
 
 ### 3. Configure environment variables
