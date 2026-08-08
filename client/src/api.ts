@@ -13,7 +13,12 @@ export interface SystemStatus {
 
 export async function checkSystem(): Promise<SystemStatus> {
   // Issue 2: call the health endpoint
-  const healthRes = await fetch(`${API_URL}/api/health`);
+  let healthRes: Response;
+  try {
+    healthRes = await fetch(`${API_URL}/api/health`);
+  } catch {
+    throw new Error(`Unable to connect to API at ${API_URL}`);
+  }
   if (!healthRes.ok) throw new Error("Backend is not responding");
 
   // TODO(Issue 4): fetch `${API_URL}/api/categories`, throw if !ok, 
